@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<div>
+		<label for="firstInput"> Enter first number</label>
+		<input id="firstInput" name="firstInput" type="number" required/>
+	</div>
+	<div>
+		<label for="secondInput">Enter second number</label>
+		<input id="secondInput" name="secondInput" type="number" required />
+	</div>
+	<div>
+		<label for="mathComparison"> Select a Mathematical Comparision</label>
+		<select id="mathComparison"name="mathComparison">
+			<option value=">">Greater (>)</option>
+			<option value="<">Less Than (<)</option>
+			<option value=">=">Greater Than Equal (>=)</option>
+			<option value="<=">Less Than Equal (<=)</option>
+			<option value="=">Equal (=)</option>
+			<option value="!=">Not Equal (!=)</option>
+		</select>
+	</div>
+	<div>
+		<input type="button" onclick=getResult() value="Submit">
+	</div>
+</form>
+
+	Result Bellow:
+	<div id="result"></div>
+
+	
+</body>
+<script src="script.js"></script>
+</html>

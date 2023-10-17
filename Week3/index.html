@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<form id="form">
+	<div>
+		<label for="firstInput"> Enter first number</label>
+		<input id="firstInput" name="firstInput" type="number" required/>
+	</div>
+	<div>
+		<label for="secondInput">Enter second number</label>
+		<input id="secondInput" name="secondInput" type="number" required />
+	</div>
+	<div>
+		<label for="mathOpperator"> Select a Mathematical Operations</label>
+		<select id="mathOpperator"name="mathOpperator">
+			<option value="+">Addition (+)</option>
+			<option value="-">Subraction (-)</option>
+			<option value="*">Multiplicaiton (*)</option>
+			<option value="**">Exponenation (**)</option>
+			<option value="/">Division (/)</option>
+			<option value="%">Modulus - Remainder (%)</option>
+		</select>
+	</div>
+	<div>
+		<input type="submit" value="Submit">
+	</div>
+</form>
+
+	Result Bellow:
+	<div id="result"></div>
+
+	
+</body>
+<script src="script.js"></script>
+</html>
