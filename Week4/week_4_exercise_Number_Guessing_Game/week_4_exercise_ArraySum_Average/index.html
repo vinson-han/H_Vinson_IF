@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 1</title>
+   
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+  </body>
+  
+  
+  <script>
+    let wrongAnswer = true
+    let answer = Math.floor(Math.random() * 100)
+    do {
+     let guessAnswer = parseInt(prompt("Guess a number between 1 to 100"))
+      
+     if(guessAnswer === answer){
+        alert("Correct Guess")
+        wrongAnswer = false
+     } else {
+        alert(`Guess Again Answer: ${answer}`)
+     }
+    }while(wrongAnswer)
+  </script>
+	
+
+</html>
