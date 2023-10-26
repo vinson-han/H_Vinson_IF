@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Temp Calculator</title>
+   
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+  </body>
+  <script>
+    function celsiusToFahrenheit(celsius){
+      return console.log((celsius * 1.8) + 32)
+    }
+    function fahreheitToCelsius(fahrenheit){
+      return console.log((fahrenheit - 32) / 1.8)
+    }
+    function convertTemperature(tempS,value) {
+      let temp = tempS.toUpperCase()
+      if(temp === "C")
+        return celsiusToFahrenheit(value)
+      else if(temp === "F")
+        return fahreheitToCelsius(value)
+      else
+        return console.log("Error type of Temp")
+    }
+
+    convertTemperature('C', 60)
+    convertTemperature('F', 100)
+    convertTemperature('afdsasd', 60)
+
+
+  </script>	
+</html>

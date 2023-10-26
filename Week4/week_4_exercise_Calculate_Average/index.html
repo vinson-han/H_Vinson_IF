@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Calculate Average</title>
+   
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+  </body>
+  <script>
+   
+	 let listNum = [1,2,10,20]
+
+	 function calculateAverage(array) {
+			let sum = 0
+			array.forEach(element => {
+				sum+=element
+			});
+			return sum/array.length
+	 }
+
+	let average = calculateAverage(listNum)
+
+	console.log(average)
+
+  </script>	
+</html>
