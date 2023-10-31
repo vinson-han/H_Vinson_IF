@@ -12,4 +12,4 @@ document.getElementById('example5').style.backgroundImage = "url('https://images
 
 document.getElementById('example6').style.visibility = "hidden"
 
- let x = document.getElementsByClassName('example7')[0].style.color = "green"
+document.getElementsByClassName('example7')[0].style.color = "green"
