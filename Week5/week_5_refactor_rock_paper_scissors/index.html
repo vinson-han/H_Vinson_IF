@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Temp Calculator</title>
+   
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+  </body>
+  <script>
+   //rock paper scissors
+
+ 
+
+//global variables
+
+let computerScore = 0;
+
+let userScore = 0;
+let round = 1
+let playGame = true
+
+
+
+ while(playGame) {
+
+  let playPrompt = prompt(`Best out of 3. Play Game? Enter: Y | N. Round: ${round}`).toLowerCase()
+
+  switch(playPrompt){
+    case('y'):
+      while(userScore <2 && computerScore < 2){
+        compareChoice(getUserChoice(),getComputerChoice())
+      }
+      userScore === 2 ? alert('User Win') : alert('Computer Win')
+      userScore = 0
+      computerScore= 0
+      round=1
+      break;
+    case('n'):
+      playGame = false
+      break;
+    default:
+      alert("Enter Valid Input")
+      break;
+  }
+ }
+
+//function getUserChoice
+//use prompt to ask user to enter their choice for rock paper or scissors
+//return users choice
+function getUserChoice(){
+  let getChoice = true   
+  let choosePrompt = prompt("Type in your choice: rock, paper or scissors.").toLocaleLowerCase()  
+
+  while(getChoice) {
+    if(choosePrompt === 'rock' || choosePrompt === 'paper' || choosePrompt === 'scissors')
+      getChoice = false
+    else{
+      alert('Please Enter a correct Value')
+      choosePrompt = prompt("Type in your choice: rock, paper or scissors.").toLocaleLowerCase()
+    }
+  }
+  return choosePrompt
+}
+ 
+
+//function getComputerChoice
+//uses Math.random to pick rock, paper or scissors at random from an array 
+//returns computer's choice
+function getComputerChoice(){
+  let random = Math.floor(Math.random()* 3)
+  let choices = ['rock', 'paper', 'scissors']
+  let computerChoice = choices[random]
+  
+  return computerChoice
+}
+
+function compareChoice(userChoice,computerChoice){
+  let result = ''
+
+  let winMessage = ''
+
+  if(userChoice === computerChoice){
+    winMessage = "Tie"
+    
+  } else if(userChoice === 'rock'){
+    switch(computerChoice){
+      case('paper'):
+        computerScore+=1
+        winMessage = 'Paper cover Rocks. computer Win'
+        break;
+      case('scissors'):
+        userScore+=1
+        winMessage = 'Rock smash scissors. user Win'
+        break;
+      default:
+        break;
+    }
+  } else if(userChoice === 'paper'){
+    switch(computerChoice){
+      case('scissors'):
+        computerScore+=1
+        winMessage = 'scissors cut paper. computer Win.'
+       
+        break;
+      case('rock'):
+        userScore+=1
+        winMessage = 'paper cover rock. user Win'
+        break;
+      default:
+        break;
+    }
+  }  else if(userChoice === 'scissors') {
+    switch(computerChoice){
+      case('rock'):
+        computerScore+=1
+        winMessage = 'Rock smash scissors. computer Win'
+    
+        break;
+      case('paper'):
+        userScore+=1
+        winMessage = 'scissors cut paper. user Win'
+        break;
+      default:
+        break;
+    }
+  }
+
+  alert(`user choose ${userChoice}. computer choose ${computerChoice}. ${winMessage}`)
+  alert(`Round: ${round} Score - Player: ${userScore} | Computer :${computerScore}`)
+  round+=1
+} 
+
+//function compareChoice
+
+//takes in userChoice and computerChoice as arguments
+
+//use nested if else to test user vs computer
+
+//output alert messages for each outcome - ex: "user chose paper. computer chose rock. paper covers rock! player wins"
+
+//increments the winners score
+
+
+
+
+//function playGame
+
+//counts round number
+
+//run a while loop as long as computer and user's score are < 2(best 2/3)
+
+//inside the while loop:
+
+  //increment round counter
+
+  //give an alert with the round # and user and computer's current scores
+
+  //run compare choice, passing it user's choice and computer's choice.
+
+  </script>	
+</html>
