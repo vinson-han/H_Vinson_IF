@@ -1,5 +1,4 @@
 const toggleMode = () => {
-
 	let button = document.querySelector('button')
 	let body = document.querySelector('body')
 
@@ -12,10 +11,4 @@ const toggleMode = () => {
 		body.style.color = 'black'
 		button.textContent = "dark mode"
 	}
-
-
-
-	
-
-
 }
