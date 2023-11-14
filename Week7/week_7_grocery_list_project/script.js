@@ -76,7 +76,7 @@ const addItemPrompt = () => {
     name: name,
     category: category,
     price: price,
-    quantity: quantity,
+    quantity: Number(quantity),
   };
 
   groceryItems.push(newItem);
