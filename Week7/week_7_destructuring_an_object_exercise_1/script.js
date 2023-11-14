@@ -18,23 +18,19 @@ function reverseVowelsAndReplaceL (string){
 	
 	return (reverseVowelsAndReplaceS(replaceString))
 }
-
 function reverseVowelsAndReplaceO (string){
-	
-
 	let replaceL = (reverseVowelsAndReplaceL(string))
 	let splitString = replaceL.split('')
 	let replaceString = splitString.map(i => (i === 'O' || i === 'o') ?  '0' : i).join('')
 
 	reverseVowelsAndReplaceS(replaceString)
 }
-
 function reverseVowelsAndReplaceS (string) {
 	let splitString = string.split('')
 	let replaceString = splitString.map(i => (i === 'S' || i === 's') ?  '5' : i).join('')
-
+	
 	console.log(replaceString)
-	 return replaceString
+	return replaceString
 }
 
 reverseVowelsAndReplaceL("LolocalsSupers Supers")
