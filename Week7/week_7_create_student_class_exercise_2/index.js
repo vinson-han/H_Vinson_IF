@@ -5,7 +5,5 @@ class Student {
 		this.major= major;
 	}
 }
-
 const Bob = new Student("Bob", 23, "CS")
-
 console.log(Bob)
