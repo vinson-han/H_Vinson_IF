@@ -45,3 +45,10 @@ class Triangle extends Shape {
 const triangle = new Triangle(4, 5);
 triangle.printShapeName();
 triangle.calculateArea();
+
+const shapes = [new Triangle(1, 2), new Circle(4)];
+
+for (const shape of shapes) {
+  shape.printShapeName();
+  shape.calculateArea();
+}
