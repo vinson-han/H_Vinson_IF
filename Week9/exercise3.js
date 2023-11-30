@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const fetchCat = () => {
   fetch("https://cataas.com/cat")
     .then((response) => console.log(response))
@@ -8,6 +6,7 @@ const fetchCat = () => {
 };
 
 fetchCat();
+
 async function fetchData() {
   try {
     const response = await fetch("https://api.example.com/data");
