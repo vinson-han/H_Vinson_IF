@@ -1,2 +1,9 @@
-Examples/
+[Ee]xamples/
+
 CSS/
+node_modules/
+public/
+
+.prettierrc
+
+GPT/
